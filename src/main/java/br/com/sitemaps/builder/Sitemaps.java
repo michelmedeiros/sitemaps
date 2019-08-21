@@ -33,8 +33,8 @@ public class Sitemaps {
 
     @Override
     public String toString() {
-        return "Sitemaos: " + this.header + ", " +
-                this.sitemapindex + ", " + this.sitemapItems + ", " +this.closeSitemapindex;
+        return this.header + "\n" +
+                this.sitemapindex + "\n" + this.sitemapItems + "\n" +this.closeSitemapindex;
     }
 
     public static class SitemapsBuider {
@@ -70,9 +70,9 @@ public class Sitemaps {
         public SitemapsBuider addSitemapItem(Map<String, String> siteMapItems) {
             StringBuilder sb = new StringBuilder();
             siteMapItems.forEach((key, value) -> {
-                sb.append("<sitemap>");
-                sb.append("<loc>").append(key).append("</loc>");
-                sb.append("<lastMod>").append(value).append("</lastMod>");
+                sb.append("<sitemap>\n");
+                sb.append("<loc>").append(key).append("</loc>\n");
+                sb.append("<lastMod>").append(value).append("</lastMod>\n");
                 sb.append("</sitemap>");
             });
 
